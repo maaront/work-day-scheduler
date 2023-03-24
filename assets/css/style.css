@@ -1,8 +1,24 @@
 :root {
     --dark: rgb(51, 30, 30);
+    --medium: gray;
     --light: white;
+    --past: rgb(170, 170, 170);
+    --present: red;
+    --future: green;
 }
 
-.hour-slot {
+.time-slot {
     display: flex;
+}
+
+.past {
+    background-color: var(--medium);
+}
+
+.present {
+    background-color: var(--accent);
+}
+
+.future {
+    background-color: var(--future);
 }
