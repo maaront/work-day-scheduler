@@ -25,20 +25,20 @@ let timeSlots = [nineEl, tenEl, twentyThreeEl];
  let dueTimes = [nineDue, tenDue, twentyThreeDue];
  // Add 10 more task elements to the array here
 
-// Loop through the time slot elements
-for (let i = 0; i < timeSlots.length; i++) {
-    // Get the due time for the current task
-    let dueTime = dueTimes[i]// Add the due time for the current task here
+// // Loop through the time slot elements
+// for (let i = 0; i < timeSlots.length; i++) {
+//     // Get the due time for the current task
+//     let dueTime = dueTimes[i]// Add the due time for the current task here
 
-    // Check if the due time is in the past, present, or future
-    if (dueTime.isBefore(now, "minute")) {
-      timeSlots[i].classList.add("past");
-    } else if (dueTime.isSame(now, "hour")) {
-      timeSlots[i].classList.add("present");
-    } else {
-      timeSlots[i].classList.add("future");
-    }
-  }
+//     // Check if the due time is in the past, present, or future
+//     if (dueTime.isBefore(now, "minute")) {
+//       timeSlots[i].classList.add("past");
+//     } else if (dueTime.isSame(now, "hour")) {
+//       timeSlots[i].classList.add("present");
+//     } else {
+//       timeSlots[i].classList.add("future");
+//     }
+//   }
   
 
 // Create new function for populateDate
@@ -54,7 +54,7 @@ function populateDate() {
  
   function saveInput(formId) {
     // Get the input element
-    let inputEl = document.querySelector("#${formId} input");
+    let inputEl = document.querySelector(`#${formId} input`);
 
     // Get the value of the input
     let inputValue = inputEl.value;
