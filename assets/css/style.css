@@ -1,0 +1,8 @@
+:root {
+    --dark: rgb(51, 30, 30);
+    --light: white;
+}
+
+.hour-slot {
+    display: flex;
+}
