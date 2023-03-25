@@ -2,34 +2,39 @@ var now = dayjs();
 var todaysDateEl = document.getElementById("todays-date");   
 var timeSlotEL = document.getElementById("time-slot");
 var saveBtn = document.querySelector('.save');
-// var descriptionEl  = document.querySelector()
+
+// Create new function for populateDate
+function populateDate() {
+// Add the value of the variable "now" to the todays date element
+    todaysDateEl.innerHTML = now.format('dddd, MMMM D, YYYY h:mm A');
+  }
+// Run populateDate function
+  populateDate();
 
 // Get the time-slot elements
 let form800El = document.getElementById("form_800");
 let form900El = document.getElementById("form_900");
 let form2300El = document.getElementById("form_2300")
- // Add 10 more due times here for each task
-
+ // Add more due times here for each time slot
 
 // Get the due times for each task
+let eightDue = dayjs("8:00 AM", "h:mm A");
 let nineDue = dayjs("9:00 AM", "h:mm A");
-let tenDue = dayjs("10:00 AM", "h:mm A");
 let twentyThreeDue = dayjs("11:00 PM", "h:mm A");
-// Add 10 more due times here for each task
+// Add more due times here for each time slot
 
-// Add an array with all the task elements
+// Add an array with all the time slot elements
 let timeSlots = [form800El, form900El, form2300El];
-// Add 10 more task elements to the array here
+// Add more time slot elements to the array here
 
  // Add an array with all the due times
- let dueTimes = [nineDue, tenDue, twentyThreeDue];
- // Add 10 more task elements to the array here
+ let dueTimes = [eightDue, nineDue, twentyThreeDue];
+ // Add more due times elements to the array here
 
 // Loop through the time slot elements
 for (let i = 0; i < timeSlots.length; i++) {
     // Get the due time for the current task
     let dueTime = dueTimes[i]// Add the due time for the current task here
-
     // Check if the due time is in the past, present, or future
     if (dueTime.isBefore(now, "hour")) {
       timeSlots[i].classList.add("past");
@@ -41,13 +46,7 @@ for (let i = 0; i < timeSlots.length; i++) {
   }
   
 
-// Create new function for populateDate
-function populateDate() {
-    // Add the value of the variable "now" to the todays date element
-    todaysDateEl.innerHTML = now.format('dddd, MMMM D, YYYY h:mm A');
-  }
-// Run populateDate function
-  populateDate();
+
 
 
 
