@@ -12,11 +12,11 @@
 }
 
 .past {
-    background-color: var(--medium);
+    background-color: var(--past);
 }
 
 .present {
-    background-color: var(--accent);
+    background-color: var(--present);
 }
 
 .future {

@@ -1,13 +1,13 @@
-var now = dayjs().format('dddd, MMMM D, YYYY h:mm A');
+var now = dayjs();
 var todaysDateEl = document.getElementById("todays-date");   
 var timeSlotEL = document.getElementById("time-slot");
 var saveBtn = document.querySelector('.save');
 // var descriptionEl  = document.querySelector()
 
 // Get the time-slot elements
-let nineEl = document.getElementById("900");
-let tenEl = document.getElementById("1000");
-let twentyThreeEl = document.getElementById("2300")
+let form800El = document.getElementById("form_800");
+let form900El = document.getElementById("form_900");
+let form2300El = document.getElementById("form_2300")
  // Add 10 more due times here for each task
 
 
@@ -18,33 +18,33 @@ let twentyThreeDue = dayjs("11:00 PM", "h:mm A");
 // Add 10 more due times here for each task
 
 // Add an array with all the task elements
-let timeSlots = [nineEl, tenEl, twentyThreeEl];
+let timeSlots = [form800El, form900El, form2300El];
 // Add 10 more task elements to the array here
 
  // Add an array with all the due times
  let dueTimes = [nineDue, tenDue, twentyThreeDue];
  // Add 10 more task elements to the array here
 
-// // Loop through the time slot elements
-// for (let i = 0; i < timeSlots.length; i++) {
-//     // Get the due time for the current task
-//     let dueTime = dueTimes[i]// Add the due time for the current task here
+// Loop through the time slot elements
+for (let i = 0; i < timeSlots.length; i++) {
+    // Get the due time for the current task
+    let dueTime = dueTimes[i]// Add the due time for the current task here
 
-//     // Check if the due time is in the past, present, or future
-//     if (dueTime.isBefore(now, "minute")) {
-//       timeSlots[i].classList.add("past");
-//     } else if (dueTime.isSame(now, "hour")) {
-//       timeSlots[i].classList.add("present");
-//     } else {
-//       timeSlots[i].classList.add("future");
-//     }
-//   }
+    // Check if the due time is in the past, present, or future
+    if (dueTime.isBefore(now, "hour")) {
+      timeSlots[i].classList.add("past");
+    } else if (dueTime.isSame(now, "hour")) {
+      timeSlots[i].classList.add("present");
+    } else {
+      timeSlots[i].classList.add("future");
+    }
+  }
   
 
 // Create new function for populateDate
 function populateDate() {
     // Add the value of the variable "now" to the todays date element
-    todaysDateEl.innerHTML = now;
+    todaysDateEl.innerHTML = now.format('dddd, MMMM D, YYYY h:mm A');
   }
 // Run populateDate function
   populateDate();
