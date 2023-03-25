@@ -15,20 +15,20 @@
     </header>
     <hr>
     <main id="schedule">
-        <form class="time-slot" id="800">
+        <form class="time-slot" id="form_800">
             <p class="time">8AM</p>
             <input class ="description" type="text" value="" />
-            <button class="save" onclick="saveInput(${formId})">Save</button>
+            <button class="save" onclick="saveInput('form_800')">Save</button>
         </form>
-        <form class="time-slot" id="900">
+        <form class="time-slot" id="form_900">
             <p class="time">9AM</p>
             <input class ="description" type="text" value="" />
-            <button class="save">Save</button>
+            <button class="save" onclick="saveInput('form_900')">Save</button>
         </form>
-        <form class="time-slot" id="2300">
+        <form class="time-slot" id="form_2300">
             <p class="time">11PM</p>
             <input class ="description" type="text" value="" />
-            <button class="save">Save</button>
+            <button class="save" onclick="saveInput('form_2300')">Save</button>
         </form>
     </main>
 

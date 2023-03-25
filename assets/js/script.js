@@ -53,28 +53,29 @@ function populateDate() {
 
  
   function saveInput(formId) {
+    // Prevent page reload
+    event.preventDefault();
     // Get the input element
     let inputEl = document.querySelector(`#${formId} input`);
 
     // Get the value of the input
     let inputValue = inputEl.value;
 
-   // Save the value to localStorage with a unique key
-   let key = `savedInput_${formId}`;
-   localStorage.setItem(key, inputValue);
-  }
+    // Save the value to localStorage with a unique key
+    let key = `savedInput_${formId}`;
+    localStorage.setItem(key, inputValue);
+}
 
 // Check if there's a saved input for each form and populate the input element
 let forms = document.querySelectorAll('form');
 forms.forEach(form => {
-  let formId = form.getAttribute('id');
-  let key = `savedInput_${formId}`;
-  let savedInput = localStorage.getItem(key);
-  if (savedInput) {
-    let inputEl = form.querySelector('input');
-    inputEl.value = savedInput;
-  }
-  
+    let formId = form.getAttribute('id');
+    let key = `savedInput_${formId}`;
+    let savedInput = localStorage.getItem(key);
+    if (savedInput) {
+        let inputEl = form.querySelector('input');
+        inputEl.value = savedInput;
+    }
 });
 
 
