@@ -19,7 +19,7 @@ let form2300El = document.getElementById("form_2300")
 
 // Get the due times for each task
 let eightDue = dayjs("8:00 AM", "h:mm A");
-let nineDue = dayjs("9:00 AM", "h:mm A");
+let nineDue = dayjs("10:00 AM", "h:mm A");
 let twentyThreeDue = dayjs("11:00 PM", "h:mm A");
 // Add more due times here for each time slot
 

@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
     <title>Work Day Scheduler</title>
 </head>
 <body>
@@ -14,18 +18,18 @@
         <p id="todays-date"></p>
     </header>
     <hr>
-    <main id="schedule">
-        <form class="time-slot" id="form_800">
-            <p class="time">8AM</p>
+    <main class="schedule">
+        <form class="time-slot past" id="form_800">
+            <span class="time">8AM</span>
             <input class ="description" type="text" value="" />
             <button class="save" onclick="saveInput('form_800')">Save</button>
         </form>
-        <form class="time-slot" id="form_900">
+        <form class="time-slot present" id="form_900">
             <p class="time">9AM</p>
             <input class ="description" type="text" value="" />
             <button class="save" onclick="saveInput('form_900')">Save</button>
         </form>
-        <form class="time-slot" id="form_2300">
+        <form class="time-slot future" id="form_2300">
             <p class="time">11PM</p>
             <input class ="description" type="text" value="" />
             <button class="save" onclick="saveInput('form_2300')">Save</button>
